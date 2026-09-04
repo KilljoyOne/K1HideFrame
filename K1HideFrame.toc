@@ -4,4 +4,4 @@
 ## Author: KilljoyOne
 ## Version: @project-version@
 
-core.lua
+Core\core.lua
