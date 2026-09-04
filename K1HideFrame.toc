@@ -1,0 +1,7 @@
+## Interface: 120100
+## Title: K1 Hide Frame
+## Notes: Hides the default UI raid control manager without causing frame taint.
+## Author: Custom
+## Version: 1.0
+
+core.lua
