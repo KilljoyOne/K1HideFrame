@@ -3,12 +3,12 @@ local frame = CreateFrame("Frame")
 local function HideRaidManager()
     if CompactRaidFrameManager then
         CompactRaidFrameManager:UnregisterAllEvents()
-        CompactRaidFrameManager:Hide()
+        CompactRaidFrameManager:SetAlpha(0)
         
-        -- Prevent Blizzard's layout engines from re-showing the frame
+        -- Prevent Blizzard's layout engines from restoring full opacity
         if not CompactRaidFrameManager._hooked then
             hooksecurefunc(CompactRaidFrameManager, "Show", function(self)
-                self:Hide()
+                self:SetAlpha(0)
             end)
             CompactRaidFrameManager._hooked = true
         end
